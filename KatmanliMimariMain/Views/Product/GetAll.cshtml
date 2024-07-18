@@ -1,0 +1,42 @@
+﻿
+@model List<EntityLayer.Conrete.Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+        <link href="c:\users\hp\source\repos\katmanlimimarimain\katmanlimimarimain\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet" />
+
+        <title>GetAll</title>
+</head>
+    
+    <body>
+        <div class="container">
+            <div class="p-5 w-50 m-0">
+                <a href="/Product/Add" class="btn btn-outline-success">Add Product</a>
+            </div>
+            <br />
+            
+            <table class="table table-bordered">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+
+                @foreach (var item in Model) 
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>@item.Price</td>
+                    </tr>
+                }
+
+            </table>
+
+
+        </div>
+    </body>
+</html>
